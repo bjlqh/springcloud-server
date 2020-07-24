@@ -1,0 +1,25 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: zuul
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9761/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  prefix: /market
+  routes:
+    order-service:
+      path: /order/**
+      serviceId: order
+    pay-service:
+      path: /pay/**
+      serviceId: pay

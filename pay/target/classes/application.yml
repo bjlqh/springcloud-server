@@ -1,0 +1,11 @@
+server:
+  port: 9092
+spring:
+  application:
+    name: pay-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9761/eureka/
+  instance:
+    prefer-ip-address: true
