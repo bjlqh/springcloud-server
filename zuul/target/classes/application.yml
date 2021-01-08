@@ -19,7 +19,7 @@ zuul:
   routes:
     order-service:
       path: /order/**
-      serviceId: order
+      serviceId: order-service
     pay-service:
       path: /pay/**
-      serviceId: pay
+      serviceId: pay-service
